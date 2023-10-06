@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--train", "False",     // Train(True)/Visualize(False)
+                "--device", "cuda",
+                // --env setting--
+                "--env", "maniskill2",  // Gridworld, miniskill2
+                "--env_id", "StackCube-v0",  // miniskill2
+                "--obs_mode", "rgbd",   // miniskill2
+                "--control_mode", "pd_ee_delta_pose", // miniskill2
+
+                "--train_dir", "./Dataset/GridWorld/train", // gridworld
+                "--test_dir", "./Dataset/GridWorld/test",   // gridworld
+
+                // --training setting--
+                "--visual_representation", "r3m", //r3m,clip
+                "--l1_weight", "5e-2",
+                "--classify_weight", "1",
+                "--reverse_weight", "2",
+                "--max_Epoch", "50",
+                "--batch_size", "8",
+                "--save_model_every_n_steps", "10",
+
+                // --visulize setting--  
+                "--save_dir", "./Weight/maniskill2/StackCube-v0/clip", 
+                "--model_path", "./Weight/maniskill2/StackCube-v0/clip/detector_checkpoint_040.pth.tar",
+                "--model", "detector_checkpoint_040"
+
+            ]
+        }
+    ]
+}
