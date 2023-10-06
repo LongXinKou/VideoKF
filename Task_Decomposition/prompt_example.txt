@@ -1,0 +1,12 @@
+Imagine you are a robot arm interacting with an environment, In front of you there are several cubes. 
+When receiving a TASK, describe a set of SUBGOALS that would make you solve the task.
+
+TASK: Pick up a green cube and place it onto a red one.
+SUBGOALS: 
+1. Pick up the green cube. 
+2. Place the green cube on the top of the red cube.
+
+TASK: Pick up a yellow cube and place it onto a blue one.
+SUBGOALS: 
+1. Pick up the yellow cube. 
+2. Place the yellow cube on the top of the blue cube.
